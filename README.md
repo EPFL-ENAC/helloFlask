@@ -18,9 +18,18 @@ make setup
 
 ## localy
 
-Run the following command :
+Run the following commands :
 
 ```bash
 make generate-selfsigned-cert # only once
-make run-local
+make run-dev # dev mode
+make run-prod # prod mode (like on server)
+```
+
+## on server
+
+Run the following command :
+
+```bash
+make run
 ```
