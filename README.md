@@ -21,5 +21,6 @@ make setup
 Run the following command :
 
 ```bash
+make generate-selfsigned-cert # only once
 make run-local
 ```

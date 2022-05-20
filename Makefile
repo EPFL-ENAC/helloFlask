@@ -1,4 +1,9 @@
+UID := $(shell id -u)
+GID := $(shell id -g)
 FLASK_APP := hello
+
+generate-selfsigned-cert:
+	cd cert && OWNER="${UID}.${GID}" docker-compose up --remove-orphans
 
 setup: install_backend
 
