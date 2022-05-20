@@ -1,29 +1,24 @@
 # Flask Hello world project ready with docker
 
-Tiny demo project that :
+Tiny demo project that run a Flask hello app :
 
-- run Flask server
-- with a Makefile
-- inside Docker
-
-# Setup
-
-Run the following command :
-
-```bash
-make setup
-```
+- locally with Flask command (dev)
+- locally with Gunicorn (test)
+- locally or on server with Gunicorn inside Docker (prod)
 
 # Run the app
 
-## localy
+## locally
 
 Run the following commands :
 
 ```bash
+make setup # only once
 make generate-selfsigned-cert # only once
-make run-dev # dev mode
-make run-prod # prod mode (like on server)
+
+make run-dev # dev mode (Flask)
+make run-prod # test mode (Gunicorn)
+make run # prod mode (Gunicorn inside Docker)
 ```
 
 ## on server
@@ -31,5 +26,10 @@ make run-prod # prod mode (like on server)
 Run the following command :
 
 ```bash
-make run
+make run # prod mode (Gunicorn inside Docker)
 ```
+
+## Check result
+
+- dev / test : browse to http://localhost:5000
+- prod : browse to https://localhost (you'll have to accept self signed certificate)
