@@ -13,4 +13,4 @@ RUN make setup
 
 COPY app/ /code/app/
 
-CMD ["make", "run-dev"]
+CMD ["make", "run-prod"]
