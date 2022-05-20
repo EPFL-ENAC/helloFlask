@@ -29,6 +29,12 @@ Run the following command :
 make run # prod mode (Gunicorn inside Docker)
 ```
 
+Stop the service :
+
+```bash
+docker-compose down
+```
+
 ## Check result
 
 - dev / test : browse to http://localhost:5000
